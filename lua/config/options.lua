@@ -9,3 +9,12 @@ opt.laststatus = 0
 opt.scrolloff = 4 -- Lines of contexts
 opt.shiftwidth = 4 -- Size of an indent
 opt.tabstop = 4 -- Number of spaces tabs count for
+opt.backup = false -- creates a backup file
+opt.swapfile = false -- creates a swapfile
+
+vim.cmd([[
+    if has('diffopt')
+        set diffopt+=algorithm:patience
+        set diffopt+=indent-heuristic
+    end
+]])
